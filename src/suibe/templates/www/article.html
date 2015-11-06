@@ -6,6 +6,15 @@
 {% endblock %}
 
 {% block main %}
+	<div class="row">
+		<div class="main col-sm-12">
+			<h3 class="text-center" style="font-weight: bold;">{{ article.title }}</h3>
+			<p class="pull-right">{{ article.date_published|strfdate }}</p>
+			<br/><br/>
+		<div class="content thumbnail" style="padding: 20px;">
+			{{ article.html }}
+		</div>
+	</div>
 {% endblock %}
 
 {% block side %}

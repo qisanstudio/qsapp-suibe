@@ -35,8 +35,8 @@ if os.path.isfile('gulpfile.js'):
     def gulp_build(done=[]):
         if not done:
             if os.system('npm install '
-                         '--disturl=http://dist.u.qiniudn.com '
-                         '--registry=http://r.cnpmjs.org'):
+                         '--disturl=https://npm.taobao.org/dist '
+                         '--registry=https://registry.npm.taobao.org'):
                 sys.exit(1)
             if os.system('bower install'):
                 sys.exit(1)
@@ -47,8 +47,8 @@ if os.path.isfile('gulpfile.js'):
     def gulp_clean(done=[]):
         if not done:
             if os.system('npm install '
-                         '--disturl=http://dist.u.qiniudn.com '
-                         '--registry=http://r.cnpmjs.org'):
+                         '--disturl=https://npm.taobao.org/dist '
+                         '--registry=https://registry.npm.taobao.org'):
                 sys.exit(1)
             if os.system('gulp clean'):
                 sys.exit(1)

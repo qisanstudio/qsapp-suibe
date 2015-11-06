@@ -1,15 +1,14 @@
-"""create_table
+"""create table
 
-Revision ID: e873c38c3f4
+Revision ID: 3a6f1fe4b81b
 Revises: None
-Create Date: 2014-10-27 20:18:48.193275
+Create Date: 2015-11-06 07:29:11.764741
 
 """
 
 # revision identifiers, used by Alembic.
-revision = None
+revision = '3a6f1fe4b81b'
 down_revision = None
-
 
 from sqlalchemy import sql
 from alembic import op
@@ -65,7 +64,7 @@ def upgrade():
     op.create_table(
         u'article',
         sa.Column('id', sa.Integer(), nullable=False, primary_key=True),
-        sa.Column('channel_id', sa.ForeignKey('channel.id'), sa.Integer(), nullable=False, index=True),
+        sa.Column('channel_id', sa.Integer(), nullable=False, index=True),
         sa.Column('is_sticky', sa.Boolean(),
                     server_default=sql.false(), nullable=False),
         sa.Column('title', sa.Unicode(64), nullable=False, unique=True, index=True),

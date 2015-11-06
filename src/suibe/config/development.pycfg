@@ -9,3 +9,8 @@ SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://suibe:ssss@localhost/suibe'
 
 UWSGI_SOCKET = '0.0.0.0:17010'
 UWSGI_MODULE  = 'suibe:app'
+
+BCRYPT_LOG_ROUNDS = 10
+
+SECRET_KEY = '71f09bb707fd4adeb95e7472cc5f4362'
+

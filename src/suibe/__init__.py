@@ -20,5 +20,5 @@ with app.app_context():
 
     app.register_blueprint(blueprint_www)
     app.add_url_rule('/apps/%s/<path:filename>' %
-                        app.name, endpoint='static', #subdomain='static',
-                        view_func=app.send_static_file)
+                     app.name, endpoint='static', #subdomain='static',
+                     view_func=app.send_static_file)

@@ -5,8 +5,8 @@ from flask import request, views, render_template
 
 from studio.core.engines import db
 from suibe.blueprints import blueprint_www
-from suibe.models import (ChannelModel, ChannelSummaryModel,
-                            ArticleModel, ArticleContentModel)
+from suibe.models import (SlideModel, ChannelModel, ChannelSummaryModel,
+                          ArticleModel, ArticleContentModel)
 
 
 class IndexView(views.MethodView):
@@ -22,7 +22,7 @@ class IndexView(views.MethodView):
 
 
 blueprint_www.add_url_rule('/', view_func=IndexView.as_view(b'index'),
-                                endpoint='index', methods=['GET'])
+                           endpoint='index', methods=['GET'])
 
 
 class SearchView(views.MethodView):

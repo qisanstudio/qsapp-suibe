@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import re
 from flask import views, render_template
 from suibe.blueprints import blueprint_www
 
 
-from suibe.models import ChannelModel, ArticleModel
+from suibe.models import ArticleModel
 
 
 class ArticleView(views.MethodView):
@@ -20,4 +19,4 @@ class ArticleView(views.MethodView):
 
 
 blueprint_www.add_url_rule('/article/<int:aid>/', view_func=ArticleView.as_view(b'article'),
-                                endpoint='article', methods=['GET'])
+                           endpoint='article', methods=['GET'])
