@@ -22,6 +22,7 @@ class AccountModel(db.Model):
     email_confirmed = db.Column(db.Boolean(), nullable=False,
                                 server_default=sql.false())
     _password = db.Column('password', db.String(length=128), nullable=False)
+    info = db.Column(db.MutableDict.as_mutable(db.JSONType()), nullable=True)
     date_created = db.Column(db.DateTime(timezone=True),
                              nullable=False, index=True,
                              server_default=db.func.current_timestamp())

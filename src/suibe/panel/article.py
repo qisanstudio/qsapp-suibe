@@ -55,7 +55,7 @@ class Slide(ModelView):
     column_default_sort = ('order', True)
     form_args = {
         'image': {'label': '图片', 'validators': [validators.Required(),
-                                               validators.URL()]},
+                                                 validators.URL()]},
         'link': {'label': '链接', 'validators': [validators.Required(),
                                                validators.URL()]},
     }

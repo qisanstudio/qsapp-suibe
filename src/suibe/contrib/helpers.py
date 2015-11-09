@@ -6,7 +6,7 @@ from jinja2 import Markup
 from ..models import NaviModel
 
 
-navi_str = '''
+navi_str1 = '''
 	{% for channel in navi.channels %}
 		{% if not channel.channels %}
 			<li class=""><a href="{{ channel.url }}">{{ channel.name }}</a></li>
@@ -20,6 +20,19 @@ navi_str = '''
 				</ul>
 			</li>
 		{% endif %}
+	{% endfor %}
+'''
+
+navi_str = '''
+	{% for channel in navi.channels %}
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{ channel.url }}" role="button" aria-haspopup="true" aria-expanded="false">{{ channel.name }}</a>
+			<ul class="dropdown-menu">
+			{% for subchannel in channel.channels %}
+				<li><a href="{{ subchannel.url }}">{{ subchannel.name }}</a></li>
+			{% endfor %}
+			</ul>
+        </li>
 	{% endfor %}
 '''
 

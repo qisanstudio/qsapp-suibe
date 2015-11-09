@@ -1,5 +1,5 @@
 body {
-    padding-top: 50px;
+    padding-top: 0px;
 }
 .banner {
 	position: relative;
@@ -114,3 +114,25 @@ body {
 .banner li { list-style: none; }
 .banner ul li { float: left; min-height: 350px;}
 .wrap { padding-top:20px; }
+
+#activity {
+	margin-top:30px;
+	color: black;
+}
+#activity th {
+	color: white;
+	background-color: #428bca;
+}
+#activity th div {
+	margin: 0 10px;
+}
+#activity th div h3 {
+	width: 50px;
+}
+#activity th div a {
+	color: white;
+}
+#activity td h4 {
+	padding:20px 0;
+	min-width: 250px;
+}

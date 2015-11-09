@@ -34,15 +34,14 @@ class ArticleModel(db.Model):
     __tablename__ = 'article'
 
     id = db.Column(db.Integer(), nullable=False, primary_key=True)
-    cid = db.Column('channel_id', db.Integer(), db.ForeignKey('channel.id'), 
-                                  nullable=False, index=True)
+    cid = db.Column('channel_id', db.Integer(), db.ForeignKey('channel.id'),
+                    nullable=False, index=True)
     is_sticky = db.Column(db.Boolean(), nullable=False,
-                                        server_default=sql.false())
+                          server_default=sql.false())
     title = db.Column(db.Unicode(64), nullable=False, unique=True, index=True)
-
     date_published = db.Column(db.DateTime(timezone=True),
                                nullable=False, index=True,
-                                server_default=db.func.current_timestamp())
+                               server_default=db.func.current_timestamp())
     date_created = db.Column(db.DateTime(timezone=True),
                              nullable=False, index=True,
                              server_default=db.func.current_timestamp())

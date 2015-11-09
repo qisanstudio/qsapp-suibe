@@ -11,12 +11,6 @@ $icon-font-path: "../fonts/";
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 70px;
-    padding-bottom: 20px;
-}
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -112,4 +106,113 @@ body {
 }
 .flashes {
     list-style: none;
+}
+
+#topnav {
+    height: 30px;
+    margin-bottom: 0px;
+    min-height:20px;
+    background-color: #1A50B8;
+}
+#topnav .navbar-form {
+    margin: 3px;
+}
+#navbar .nav>li>a {
+    border-right:1px solid #fff;
+    line-height: 8px;
+}
+#navbar .nav>li>a .glyphicon {
+    line-height: 0px;
+}
+#navbar-inner li:last-child>a {
+ border-right: 0px;
+}
+#navbar .nav>li>a {
+    color: white;
+    padding: 4px 10px;
+    margin: 6px 0px;
+}
+#topnav .btn {
+    padding: 0px;
+}
+#topnav .form-control {
+    height: 22px;
+}
+#topnav .header {
+    margin-bottom: 0px;
+}
+#topnav .navbar {
+    margin-bottom: 0px;
+}
+
+#mainnav {
+    height: 100px;
+    background-color: #dedede;
+    background-image: url(http://img.bimba.edu.cn/res/nsd/images/navbar-bg.jpg);
+    background-position: -150px 0;
+    background-repeat: no-repeat;
+    background-size: auto 186px;
+}
+#mainnav .container {
+    margin: 0px auto;
+    padding: 25px 5px;
+}
+#mainnav .nav>li>a {
+    margin: 25px 0px;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+#mainnav .nav>li>a {
+    border-right:1px solid #000;
+    line-height: 8px;
+}
+#mainnav .nav>li:last-child>a {
+ border-right: 0px;
+}
+.nav-pills>li>a {
+    color: black;
+    border-radius: 0px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+#mainnav .dropdown-menu {
+    top: 65%;
+    padding: 0px 0px;
+    font-size: 16px;
+}
+
+#mainnav .dropdown-menu>li>a {
+    display: block;
+    padding: 5px 20px;
+    clear: both;
+    font-weight: 400;
+    color: #333;
+    background-color: #eee;
+    white-space: nowrap;
+}
+#mainnav .dropdown-menu>li {
+    margin-top: 1px;
+}
+#mainnav .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.footer a {
+    color: #777;
+}
+.footer .container {
+    margin: 0 auto;
+    padding: 15px 5px;
+}
+.footer .copyright {
+    color: white;
+    padding: 10px 0px;
+    background-color: #1A50B8;
+    text-align: center;
+}
+#main {
+    min-height: 500px;
 }

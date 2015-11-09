@@ -5,6 +5,25 @@
 	<link rel="stylesheet" href="{{ versioning('styles/article.css') }}">
 {% endblock %}
 
+
+{% block banner %}
+<ol class="breadcrumb" style="margin: 0px auto;">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+	<li class="active">Data</li>
+</ol>
+{% endblock %}
+
+{% block side %}
+<ul class="list-group">
+  	<li class="list-group-item">Cras justo odio</li>
+  	<li class="list-group-item">Dapibus ac facilisis in</li>
+  	<li class="list-group-item">Morbi leo risus</li>
+  	<li class="list-group-item">Porta ac consectetur ac</li>
+  	<li class="list-group-item">Vestibulum at eros</li>
+</ul>
+{% endblock %}
+
 {% block main %}
 	<div class="row">
 		<div class="main col-sm-12">
@@ -17,5 +36,3 @@
 	</div>
 {% endblock %}
 
-{% block side %}
-{% endblock %}
