@@ -11,7 +11,9 @@ Babel(app=app, default_locale='zh')
 
 with app.app_context():
     from suibe.contrib import helpers
-    app.jinja_env.globals.update(render_navi=helpers.render_navi)
+    app.jinja_env.globals.update(render_navi=helpers.render_navi,
+                                 render_activity=helpers.render_activity,
+                                 render_news=helpers.render_news)
     from suibe import views
     from suibe.panel import admin
     from suibe.blueprints import blueprint_www

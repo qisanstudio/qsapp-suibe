@@ -24,64 +24,16 @@
 {% endblock %}
 
 {% block full %}
-	<table id="activity" class="table table-bordered">
-	    <tbody>
-	        <tr>
-	    	    <th scope="row">
-	    	    	<div>
-		    	    	<h3>活动预告</h3>
-		    	    	<a herf="">更多></a>
-	    	    	</div>
-	    	    </th>
-	        	<td><h4><a href="">【2015-11-14】 “CMRC中国经济观察”第45次季度报告会</a></h4></td>
-	        	<td><h4><a href="">【2015-11-14】 “CMRC中国经济观察”第45次季度报告会</a></h4></td>
-	        	<td><h4><a href="">【2015-11-14】 “CMRC中国经济观察”第45次季度报告会</a></h4></td>
-	        	<td><h4><a href="">【2015-11-14】 “CMRC中国经济观察”第45次季度报告会</a></h4></td>
-	        </tr>
-	    </tbody>
-	</table>
+	{{ render_activity(59) }}
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-default">
-	  			<div class="panel-heading" style="font-size: 18px;">新闻</div>
-	  			<ul class="list-group">
-	  			{% for i in [1, 2, 3, 4, 5, 6, 7, 8] %}
-	    			<li class="list-group-item" style="border: 0px;"><a href="" style="color: black;">Cras justo odio</a></li>
-	    		{% endfor %}
-	  			</ul>
-	  			<div class="panel-footer" style="background-color: white;border-top: 0px;">
-	  				<div class="pull-right"><a href="" style="color: black;">更多></a></div>
-	  				<div class="clearfix"></div>
-	  			</div>
-			</div>
+			{{ render_news(60) }}
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-default">
-	  			<div class="panel-heading" style="font-size: 18px;">观点</div>
-	  			<ul class="list-group">
-	  			{% for i in [1, 2, 3, 4, 5, 6, 7, 8] %}
-	    			<li class="list-group-item" style="border: 0px;"><a href="" style="color: black;">Cras justo odio</a></li>
-	    		{% endfor %}
-	  			</ul>
-	  			<div class="panel-footer" style="background-color: white;border-top: 0px;">
-	  				<div class="pull-right"><a href="" style="color: black;">更多></a></div>
-	  				<div class="clearfix"></div>
-	  			</div>
-			</div>
+			{{ render_news(61) }}
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-default">
-	  			<div class="panel-heading" style="font-size: 18px;">学术</div>
-	  			<ul class="list-group">
-	  			{% for i in [1, 2, 3, 4, 5, 6, 7, 8] %}
-	    			<li class="list-group-item" style="border: 0px;"><a href="" style="color: black;">Cras justo odio</a></li>
-	    		{% endfor %}
-	  			</ul>
-	  			<div class="panel-footer" style="background-color: white;border-top: 0px;">
-	  				<div class="pull-right"><a href="">更多></a></div>
-	  				<div class="clearfix"></div>
-	  			</div>
-			</div>
+			{{ render_news(62) }}
 		</div>
 	</div>
 

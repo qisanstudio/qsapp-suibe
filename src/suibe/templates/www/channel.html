@@ -5,6 +5,36 @@
 	<link rel="stylesheet" href="{{ versioning('styles/channel.css') }}">
 {% endblock %}
 
+{% block banner %}
+    <div id="breadcrumb">
+        <div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb" style="margin: 0px auto;">
+					{% if channel.parent %}
+				    <li><a href="{{ url_for('views.channel', cid=channel.parent.id) }}">{{ channel.parent.name }}
+				    </a></li>
+				    {% endif %}
+					<li class="active">{{ channel.name }}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block side %}
+<ul class="list-group">
+	{% if channel.parent %}
+		{% for c in channel.parent.channels %}
+	  	<li class="list-group-item"><a href="{{ url_for('views.channel', cid=c.id) }}">{{ c.name }}</a></li>
+	  	{% endfor %}
+	{% else %}
+		{% for c in channel.channels %}
+	  	<li class="list-group-item"><a href="{{ url_for('views.channel', cid=c.id) }}">{{ c.name }}</a></li>
+	  	{% endfor %}
+	{% endif %}
+</ul>
+{% endblock %}
+
 {% block main %}
 	<div class="panel panel-primary">
 	    <div class="panel-heading">
@@ -35,7 +65,5 @@
 	<div class="row">
 		{{ pager.links|safe }}
 	</div>
-{% endblock %}
 
-{% block side %}
 {% endblock %}

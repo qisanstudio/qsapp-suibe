@@ -7,20 +7,24 @@
 
 
 {% block banner %}
-<ol class="breadcrumb" style="margin: 0px auto;">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Library</a></li>
-	<li class="active">Data</li>
-</ol>
+    <div id="breadcrumb">
+        <div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb" style="margin: 0px auto;">
+				    <li><a href="{{ url_for('views.channel', cid=article.channel.parent.id) }}">{{ article.channel.parent.name }}</a></li>
+				    <li><a href="{{ url_for('views.channel', cid=article.channel.id) }}">{{ article.channel.name }}</a></li>
+					<li class="active">{{ article.title }}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block side %}
 <ul class="list-group">
-  	<li class="list-group-item">Cras justo odio</li>
-  	<li class="list-group-item">Dapibus ac facilisis in</li>
-  	<li class="list-group-item">Morbi leo risus</li>
-  	<li class="list-group-item">Porta ac consectetur ac</li>
-  	<li class="list-group-item">Vestibulum at eros</li>
+	{% for c in article.channel.parent.channels %}
+  	<li class="list-group-item"><a href="{{ url_for('views.channel', cid=c.id) }}">{{ c.name }}</a></li>
+  	{% endfor %}
 </ul>
 {% endblock %}
 
@@ -28,9 +32,13 @@
 	<div class="row">
 		<div class="main col-sm-12">
 			<h3 class="text-center" style="font-weight: bold;">{{ article.title }}</h3>
-			<p class="pull-right">{{ article.date_published|strfdate }}</p>
+			<hr>
+			<p class="text-center">
+				<b>发布日期:&nbsp;&nbsp;</b>{{ article.date_published|strfdate }}&nbsp;&nbsp;&nbsp;&nbsp;
+				<b>来源:&nbsp;&nbsp;</b>{{ article.title }}
+			</p>
 			<br/><br/>
-		<div class="content thumbnail" style="padding: 20px;">
+		<div class="content thumbnail" style="padding: 20px;border: 0px;">
 			{{ article.html }}
 		</div>
 	</div>

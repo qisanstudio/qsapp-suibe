@@ -216,3 +216,11 @@ $icon-font-path: "../fonts/";
 #main {
     min-height: 500px;
 }
+
+#breadcrumb {
+    background-color: #f5f5f5;
+}
+#breadcrumb .row {
+    margin: 0px auto;
+    width: 1170px;
+}
