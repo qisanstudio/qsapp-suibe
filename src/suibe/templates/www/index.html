@@ -5,25 +5,23 @@
 	<link rel="stylesheet" href="{{ versioning('styles/index.css') }}">
 {% endblock %}
 
-{% block banner %}
-	{% if slides %}
-	<div class="banner">
-    	<ul>
-    		{% for slide in slides %}
-        	<li style="width: 25%; background-image: url({{ slide.image }}); background-size: 100% 100%;">
-        		<div class="inner">
-					<h1>{{ slide.title }}</h1>
-					<p>{{ slide.describe }}</p>
-					{% if slide.link %}<a class="btn" href="{{ slide.link }}">了解详情</a>{% endif %}
-				</div>
-        	</li>
-        	{% endfor %}
-    	</ul>
-	</div>
-	{% endif %}
-{% endblock %}
-
 {% block full %}
+    {% if slides %}
+    <div class="banner">
+        <ul>
+            {% for slide in slides %}
+            <li style="width: 25%; background-image: url({{ slide.image }}); background-size: 100% 100%;">
+                <div class="inner">
+                    <h1>{{ slide.title }}</h1>
+                    <p>{{ slide.describe }}</p>
+                    {% if slide.link %}<a class="btn" href="{{ slide.link }}">了解详情</a>{% endif %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
 	{{ render_activity(59) }}
 	<div class="row">
 		<div class="col-md-4">
@@ -92,32 +90,32 @@
   		<div class="col-md-1">
     		<div class="thumbnail" style="padding: 0px; border: 0px;">
       			<img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101345195.png" alt="...">
-      			<div class="caption" style="font-size: 4px; padding: 0px;margin-top: 10px;">
-        			<p>研究生/博士</p>
+      			<div class="caption" style="padding: 0px;margin-top: 10px;">
+        			<p class="text-center">研究生/博士</p>
       			</div>
     		</div>
   		</div>
   		 <div class="col-md-1">
     		<div class="thumbnail" style="padding: 0px; border: 0px;">
       			<img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101345118.png" alt="...">
-      			<div class="caption" style="font-size: 4px; padding: 0px;margin-top: 10px;">
-        			<p>经济学双学位</p>
+      			<div class="caption" style="padding: 0px;margin-top: 10px;">
+        			<p class="text-center">经济学双学位</p>
       			</div>
     		</div>
   		</div>
   		<div class="col-md-1">
     		<div class="thumbnail" style="padding: 0px; border: 0px;">
       			<img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101345452.png" alt="...">
-      			<div class="caption" style="font-size: 4px; padding: 0px;margin-top: 10px;">
-        			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MBA</p>
+      			<div class="caption" style="padding: 0px;margin-top: 10px;">
+        			<p class="text-center">MBA</p>
       			</div>
     		</div>
   		</div>
   		<div class="col-md-1">
     		<div class="thumbnail" style="padding: 0px; border: 0px;">
       			<img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101345274.png" alt="...">
-      			<div class="caption" style="font-size: 4px; padding: 0px;margin-top: 10px;">
-        			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMBA</p>
+      			<div class="caption" style="padding: 0px;margin-top: 10px;">
+        			<p class="text-center">EMBA</p>
       			</div>
     		</div>
   		</div>
@@ -128,16 +126,16 @@
 			<table class="table">
 			    <tbody>
 			        <tr>
-			        	<td style="border-top: 0px;"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210134659.png" alt=""></td>
-			        	<td style="border-top: 0px;"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101346768.png" alt=""></td>
-			        	<td style="border-top: 0px;"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210152364.png" alt=""></td>
-			        	<td style="border-top: 0px;"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210152747.png" alt=""></td>
+			        	<td style="border-top: 0px;" class="text-center"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210134659.png" alt=""></td>
+			        	<td style="border-top: 0px;" class="text-center"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/20150402101346768.png" alt=""></td>
+			        	<td style="border-top: 0px;" class="text-center"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210152364.png" alt=""></td>
+			        	<td style="border-top: 0px;" class="text-center"><img src="http://img.bimba.edu.cn/resources/picture/1/2015/04/02/2015040210152747.png" alt=""></td>
 			        </tr>
 			        <tr>
-			        	<td style="border-top: 0px;"><p>中国经济研究中心</p></td>
-			        	<td style="border-top: 0px;"><p>中国经济研究中心</p></td>
-			        	<td style="border-top: 0px;"><p>中国经济研究中心</p></td>
-			        	<td style="border-top: 0px;"><p>中国经济研究中心</p></td>
+			        	<td style="border-top: 0px;"><p class="text-center">中国经济研究中心</p></td>
+			        	<td style="border-top: 0px;"><p class="text-center">中国经济研究中心</p></td>
+			        	<td style="border-top: 0px;"><p class="text-center">中国经济研究中心</p></td>
+			        	<td style="border-top: 0px;"><p class="text-center">中国经济研究中心</p></td>
 			        </tr>
 			    </tbody>
 			</table>

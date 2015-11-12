@@ -62,9 +62,9 @@ news_str = '''
 	<div class="panel panel-default">
 			<div class="panel-heading" style="font-size: 18px;">{{ channel.name }}</div>
 			<ul class="list-group">
-				{% for article in channel.articles %}
+				{% for article in channel.articles[:10] %}
 				<li class="list-group-item" style="border: 0px;">
-					<a href="{{ article.url }}" style="color: black;">{{ article.title|truncate(25, True) }}</a>
+					<a href="{{ article.url }}" style="color: black;">{{ article.title|truncate(22, True) }}</a>
 				</li>
 				{% endfor %}
 			</ul>
